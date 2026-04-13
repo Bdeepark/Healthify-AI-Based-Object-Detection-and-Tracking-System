@@ -1,1 +1,9 @@
-# heathcare
+Healthify-AI Based RealTime Object Detection and Tracking System
+
+This project presents an intelligent video analysis system designed to process indoor surveillance footage for monitoring human interactions in a room environment. The system utilizes advanced computer vision and deep learning techniques to detect, track, and analyze individuals over time, enabling automatic identification of roles such as patient and caregiver based on their observed activities.
+
+The system employs an object detection model integrated with a custom tracking algorithm to continuously monitor multiple entities within the video. It analyzes temporal patterns of actions—such as a person lying on a bed, sitting for extended durations, attempting to stand, or sleeping—to classify them as a patient. Similarly, actions like assisting movement, checking reports, administering medication, or monitoring behavior are used to identify a caregiver. A semantic relationship is established between these entities across the duration of the video, allowing the system to understand interaction dynamics.
+
+In addition to human tracking, the system also detects and tracks relevant objects such as beds, wheelchairs, and other assistive items that play a crucial role in patient-caregiver interactions. Each frame is processed to extract detailed metadata, including object detections, action labels, role assignments, and spatial-temporal information.
+
+All extracted information is structured and stored in JSON format, creating a rich, queryable dataset. This data is further utilized by an on-chip Large Language Model (LLM), which acts as an intelligent layer to summarize the video content and respond to user queries. This integration enables natural language interaction with the processed video data, effectively transforming raw surveillance footage into meaningful insights.
